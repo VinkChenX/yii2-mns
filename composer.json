@@ -1,0 +1,14 @@
+{
+    "name": "vinkchen/yii2-mns",
+    "description": "Mns Component For Yii2",
+    "authors": [
+        {
+            "name": "VinkChen",
+            "email": "VinkChen@gmail.com"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {
+        "php":">=5.3.0"
+    }
+}
