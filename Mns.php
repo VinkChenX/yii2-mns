@@ -113,15 +113,15 @@ class Mns extends \yii\base\Component {
      * 订阅主题
      * @param string|\AliyunMNS\Topic $topic 主题的名称或主题类
      * @param string $subscriptionName 订阅识别名称
-     * @param string $subscriptionUrl 订阅事件的回调地址
+     * @param string $endpoint 订阅事件的回调地址
      * @throws MnsException
      * @return \AliyunMNS\Responses\SubscribeResponse
      */
-    public function topicSubscribe($topic, $subscriptionName, $subscriptionUrl) {
+    public function topicSubscribe($topic, $subscriptionName, $endpoint) {
         if( !($topic instanceof \AliyunMNS\Topic)) {
             $topic = $this->topicGet($topic);
         }
-        $attributes = new SubscriptionAttributes($subscriptionName, $subscriptionUrl);
+        $attributes = new SubscriptionAttributes($subscriptionName, $endpoint);
         return $topic->subscribe($attributes);
     }
     
